@@ -1,0 +1,178 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#F5FAFF;
+}
+
+.dashboard{
+    display:flex;
+    min-height:100vh;
+}
+
+/* MENU */
+
+.sidebar{
+    width:250px;
+    background:#12354A;
+    color:white;
+    padding:20px;
+    transition:.3s;
+    overflow:hidden;
+}
+
+.sidebar.closed{
+    width:80px;
+}
+
+.sidebar.closed .text{
+    display:none;
+}
+
+.sidebar.closed .logo{
+    display:none;
+}
+
+.toggle-btn{
+    width:100%;
+    background:none;
+    border:none;
+    color:white;
+    font-size:24px;
+    cursor:pointer;
+    margin-bottom:20px;
+}
+
+.logo{
+    color:#6BBBEF;
+    margin-bottom:30px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    padding:14px;
+    margin-bottom:8px;
+    border-radius:10px;
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    cursor:pointer;
+}
+
+.sidebar li a{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    width:100%;
+
+    text-decoration:none;
+    color:inherit;
+}
+
+.sidebar li:hover{
+    background:#1A4966;
+}
+
+.active{
+    background:#BFE7FA;
+    color:#12354A;
+    font-weight:bold;
+}
+
+/* CONTENIDO */
+
+.content{
+    flex:1;
+    padding:40px;
+}
+
+.content h1{
+    color:#2E4A62;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:#5A7285;
+    margin-bottom:25px;
+}
+
+/* TABS */
+
+.tabs{
+    display:flex;
+    gap:10px;
+    margin-bottom:30px;
+}
+
+.tab{
+    padding:10px 18px;
+    border:2px solid #89CFF0;
+    background:white;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.active-tab{
+    background:#BFE7FA;
+    color:#12354A;
+    font-weight:bold;
+}
+
+/* TARJETAS */
+
+.resource-card{
+    background:white;
+
+    border:2px solid #89CFF0;
+    border-radius:15px;
+
+    padding:20px;
+
+    margin-bottom:20px;
+
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    box-shadow:6px 6px 0px #BFE7FA;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.resource-card:hover{
+    transform:translateY(-3px);
+}
+
+.resource-icon{
+    font-size:45px;
+}
+
+.resource-info{
+    flex:1;
+}
+
+.resource-info h3{
+    color:#2E4A62;
+    margin-bottom:8px;
+}
+
+.resource-info p{
+    color:#5A7285;
+}
+
+.arrow{
+    font-size:24px;
+    color:#54AEE7;
+}
