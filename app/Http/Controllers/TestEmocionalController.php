@@ -11,7 +11,7 @@ class TestEmocionalController extends Controller
     {
         $reglas = [];
         for ($i = 1; $i <= 10; $i++) {
-            $reglas["q{$i}"] = ['required', 'integer', 'between:0,4'];
+            $reglas["q{$i}"] = ['required', 'integer', 'between:1,5'];
         }
 
         $validado = $request->validate($reglas);
@@ -48,9 +48,9 @@ class TestEmocionalController extends Controller
     private function calcularNivel(int $puntaje): string
     {
         return match (true) {
-            $puntaje <= 5 => 'Bajo',
-            $puntaje <= 10 => 'Moderado',
-            $puntaje <= 15 => 'Alto',
+            $puntaje <= 9 => 'Bajo',
+            $puntaje <= 14 => 'Moderado',
+            $puntaje <= 19 => 'Alto',
             default => 'Muy alto',
         };
     }

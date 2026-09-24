@@ -38,12 +38,12 @@
 
         <div class="question-card">
             <h3>Nivel de estrés: {{ $test->nivel_estres }}</h3>
-            <p>Puntaje: {{ $test->puntaje_estres }} / 20</p>
+            <p>Puntaje: {{ $test->puntaje_estres }} / 25</p>
         </div>
 
         <div class="question-card">
             <h3>Nivel de ansiedad: {{ $test->nivel_ansiedad }}</h3>
-            <p>Puntaje: {{ $test->puntaje_ansiedad }} / 20</p>
+            <p>Puntaje: {{ $test->puntaje_ansiedad }} / 25</p>
         </div>
 
         <div class="info-card">
@@ -51,7 +51,7 @@
         </div>
 
         <div class="buttons">
-            <a href="{{ route('ejercicios') }}" class="btn-primary">Ver ejercicios recomendados →</a>
+            <a href="{{ route('ejercicios', ['categoria' => $test->categoria_slug]) }}" class="btn-primary">Ver ejercicios recomendados →</a>
         </div>
 
     </main>

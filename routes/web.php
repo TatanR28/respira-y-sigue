@@ -59,6 +59,7 @@ Route::middleware('auth')->group(function () {
     })->name('perfil');
 
     Route::put('/perfil', [ProfileController::class, 'update'])->name('perfil.actualizar');
+    Route::get('/perfil/reporte', [ProfileController::class, 'reporte'])->name('perfil.reporte');
 });
 
 // Vista de Error 404

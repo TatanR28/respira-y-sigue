@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Emocional - Respira y Sigue</title>
-    <link rel="stylesheet" href="css/Test emocional.css">
+    <link rel="stylesheet" href="{{ asset('css/Test emocional.css') }}">
 </head>
 <body>
 
@@ -35,6 +35,14 @@
 
         <h1>Test emocional diario</h1>
         <p class="subtitle">Responde estas preguntas para conocer cómo te sientes hoy.</p>
+
+        <div class="leyenda-escala">
+            <span class="badge">5 = Muy alto</span>
+            <span class="badge">4 = Alto</span>
+            <span class="badge">3 = Intermedio</span>
+            <span class="badge">2 = Bajo</span>
+            <span class="badge">1 = Muy bajo</span>
+        </div>
 
         @if ($errors->any())
             <div style="background:#f8d7da; color:#842029; padding:10px; border-radius:6px; margin-bottom:15px;">
@@ -76,11 +84,33 @@
                     <div class="question-card">
                         <h3>{{ $texto }}</h3>
 
-                        <label><input type="radio" name="q{{ $numero }}" value="4" required> Casi siempre</label>
-                        <label><input type="radio" name="q{{ $numero }}" value="3"> Frecuentemente</label>
-                        <label><input type="radio" name="q{{ $numero }}" value="2"> A veces</label>
-                        <label><input type="radio" name="q{{ $numero }}" value="1"> Rara vez</label>
-                        <label><input type="radio" name="q{{ $numero }}" value="0"> Nunca</label>
+                        <div class="opciones-numericas">
+                            <label class="opcion-num">
+                                <input type="radio" name="q{{ $numero }}" value="5" required>
+                                <span class="numero">5</span>
+                                <span class="etiqueta">Muy alto</span>
+                            </label>
+                            <label class="opcion-num">
+                                <input type="radio" name="q{{ $numero }}" value="4">
+                                <span class="numero">4</span>
+                                <span class="etiqueta">Alto</span>
+                            </label>
+                            <label class="opcion-num">
+                                <input type="radio" name="q{{ $numero }}" value="3">
+                                <span class="numero">3</span>
+                                <span class="etiqueta">Intermedio</span>
+                            </label>
+                            <label class="opcion-num">
+                                <input type="radio" name="q{{ $numero }}" value="2">
+                                <span class="numero">2</span>
+                                <span class="etiqueta">Bajo</span>
+                            </label>
+                            <label class="opcion-num">
+                                <input type="radio" name="q{{ $numero }}" value="1">
+                                <span class="numero">1</span>
+                                <span class="etiqueta">Muy bajo</span>
+                            </label>
+                        </div>
                     </div>
                 </div>
             @endforeach

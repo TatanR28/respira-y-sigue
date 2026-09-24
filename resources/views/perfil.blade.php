@@ -137,6 +137,11 @@
                     <p>Recordatorios activos</p>
                 </div>
 
+                        <div style="text-align:center; margin-top:20px;">
+            <a href="{{ route('perfil.reporte') }}" target="_blank" class="save-btn" style="text-decoration:none; display:inline-block;">
+                📄 Generar reporte completo
+            </a>
+        </div>
             </div>
 
         </div>

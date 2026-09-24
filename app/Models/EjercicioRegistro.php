@@ -15,4 +15,9 @@ class EjercicioRegistro extends Model
         'ejercicio_id',
         'completado_en',
     ];
+
+    public function ejercicio()
+    {
+        return $this->belongsTo(Ejercicio::class);
+    }
 }
